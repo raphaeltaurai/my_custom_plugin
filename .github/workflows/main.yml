@@ -39,7 +39,7 @@ jobs:
           server: ftp.sacramentagenda.net
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.PASSWORD }}         
-          server-dir: /
-          exclude: |
+          server-dir: /public_html/wp-content/plugins/my_custom_plugin
+          exclude:  
             **/exclude/**
             **/.github/** 
