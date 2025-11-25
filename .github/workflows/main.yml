@@ -1,0 +1,25 @@
+name: Deploy plugin to sandbox
+
+on:
+  push:
+    tags:
+      - 'v*'    # deploy only when you push a tag like v1.0.0
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to sandbox via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          protocol: ftp
+          port: 21
+          log-level: minimal
