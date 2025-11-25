@@ -16,10 +16,9 @@ jobs:
       - name: Deploy to sandbox via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          server: ${{ secrets.HOST_NAME}}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.PASSWORD }}
           protocol: ftp
           port: 21
           log-level: minimal
