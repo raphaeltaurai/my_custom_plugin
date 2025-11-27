@@ -40,6 +40,6 @@ jobs:
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.PASSWORD }}         
           server-dir: /public_html/wp-content/plugins/my_custom_plugin/
-          exclude:  
+          exclude: |
             **/exclude/**
-            **/.github/** 
+            **/.github/**
