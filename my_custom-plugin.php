@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Simple Contact Form
+ * Plugin Name: My Custom Plugin
  * Description: A basic multi-field contact form plugin using WordPress Shortcode and Hooks.
  * Version: 1.0.2
- * Author: Your Name
+ * Author: Raphael Shawn Taurai
  * License: GPL2
- * Text Domain: simple-contact-form
+ * Text Domain: my-custom-plugin
  */
 
 // Exit if accessed directly (security)
@@ -20,11 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function scf_enqueue_styles() {
     // Only load the CSS file if the shortcode is present on the page (optimization)
     global $post;
-    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'contact_form' ) ) {
+    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'my_custom_plugin' ) ) {
         // --- PATH CORRECTED HERE ---
         wp_enqueue_style(
             'scf-style',
-            plugins_url( 'contactform.css', __FILE__ ), // Reference to assets/contactform.css
+            plugins_url( 'customplugin.css', __FILE__ ), // Reference to customplugin.css
             array(),
             '1.0.2'
         );
@@ -163,5 +163,4 @@ function scf_handle_form_submission() {
 // 'admin_post_nopriv_ACTION_NAME' handles submissions from non-logged-in users
 add_action( 'admin_post_nopriv_scf_handle_form_submission', 'scf_handle_form_submission' );
 // 'admin_post_ACTION_NAME' handles submissions from logged-in users
-
 add_action( 'admin_post_scf_handle_form_submission', 'scf_handle_form_submission' );
