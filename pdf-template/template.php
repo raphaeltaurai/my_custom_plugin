@@ -3,8 +3,8 @@
  * Template Name: Event Ticket
  * Description: External HTML + CSS PDF template
  * Version: 1.0
- * Author: Raphael Taurai
- * Group: Core
+ * Author: Raphael Shawn Taurai
+ * Group: Legacy
  * Required PDF Version: 6.0
  */
 
