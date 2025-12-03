@@ -1,35 +1,31 @@
-<div class="ticket">
-    <div class="ticket-left">
-        <div class="brand">
-            <img class="logo" src="{{logo_url}}" alt="Logo">
-            <h2 class="event-title">{{event_title}}</h2>
-        </div>
-
-        <div class="ticket-body">
-            <p class="label">Registrant</p>
-            <h3 class="value">{{name}}</h3>
-
-            <p class="label">Quantity</p>
-            <p class="value">{{qty}}</p>
-
-            <p class="label">Add-ons</p>
-            <p class="value addons">{{addons}}</p>
-        </div>
-
-        <div class="footer-note">
-            <p>Present this ticket at event check-in.</p>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Ticket </title>
+    <link rel="stylesheet" href="<?php echo plugin_dir_url(__FILE__) .style.css'; ?>">
+</head>
+<body>
+<div class ="ticket-container">
+    <div class="ticket-header">
+        <img src="<?php echo plugin_dir_url_(__FILE__) . 'img/company-logo.png'; ?>" alt="Company Logo" class="ticket-logo">
+        <h1 class="event-name"><?php echo $event_name;?></h1>
     </div>
 
-    <div class="ticket-right">
-        <div class="qr-wrap">
-            <img class="qr" src="{{qr_src}}" alt="Entry QR">
-            <p class="qr-label">Scan for entry details</p>
-        </div>
-
-        <div class="meta">
-            <p><strong>Ticket ID:</strong> {{entry_id}}</p>
-            <p><strong>Generated:</strong> {{generated_date}}</p>
-        </div>
+    <div class="ticket-body">
+        <p><strong>Registrant</strong><?php echo $registrant_name; ?></p>
+        <p><strong>Number of Attendees:</strong><?php echp $attendees; ?</p>
+        <p><strong>Add-ons</strong><?php echo $addons; ?</p>
     </div>
+
+    <?php if(function_exists('GFQR_Code')): ?>
+    <div class="ticket-qr">
+        <?php echo GRQR_Code::generate($entry_url);>
+    </div>
+    <p class="ticked-footer">Please bring this ticket to the event</p>
 </div>
+
+
+
+</body>
+</html>
