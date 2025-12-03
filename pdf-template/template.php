@@ -1,10 +1,10 @@
 <?php
 /**
  * Template Name: Event Ticket
- * Version: 1.0
  * Description: External HTML + CSS PDF template
+ * Version: 1.0
  * Author: Raphael Taurai
- * Group: Custom Templates
+ * Group: Core
  * Required PDF Version: 6.0
  */
 
