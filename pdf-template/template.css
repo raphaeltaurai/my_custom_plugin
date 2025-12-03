@@ -1,0 +1,29 @@
+.ticket-container{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 2px solid #333;
+    width: 500px;
+}
+
+.ticket-header{
+    text-align: center;
+}
+
+.ticket-logo{
+    max-height: 80px;
+}
+
+.ticket-logo{
+    margin-top:20px;
+}
+
+.ticket-qr{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ticket-footer{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+<div class="ticket">
+    <div class="ticket-left">
+        <div class="brand">
+            <img class="logo" src="{{logo_url}}" alt="Logo">
+            <h2 class="event-title">{{event_title}}</h2>
+        </div>
+
+        <div class="ticket-body">
+            <p class="label">Registrant</p>
+            <h3 class="value">{{name}}</h3>
+
+            <p class="label">Quantity</p>
+            <p class="value">{{qty}}</p>
+
+            <p class="label">Add-ons</p>
+            <p class="value addons">{{addons}}</p>
+        </div>
+
+        <div class="footer-note">
+            <p>Present this ticket at event check-in.</p>
+        </div>
+    </div>
+
+    <div class="ticket-right">
+        <div class="qr-wrap">
+            <img class="qr" src="{{qr_src}}" alt="Entry QR">
+            <p class="qr-label">Scan for entry details</p>
+        </div>
+
+        <div class="meta">
+            <p><strong>Ticket ID:</strong> {{entry_id}}</p>
+            <p><strong>Generated:</strong> {{generated_date}}</p>
+        </div>
+    </div>
+</div>
