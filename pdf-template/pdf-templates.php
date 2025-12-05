@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Event Ticket
+ * Template Name: pdf-templates
  * Description: External HTML + CSS PDF template
  * Version: 1.0
  * Author: Raphael Shawn Taurai
