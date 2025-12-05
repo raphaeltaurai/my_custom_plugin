@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Ticket </title>
+    <link rel="stylesheet" href="<?php echo plugin_dir_url(__FILE__) .style.css'; ?>">
+</head>
+<body>
+<div class ="ticket-container">
+    <div class="ticket-header">
+        <img src="<?php echo plugin_dir_url_(__FILE__) . 'img/company-logo.png'; ?>" alt="Company Logo" class="ticket-logo">
+        <h1 class="event-name"><?php echo $event_name;?></h1>
+    </div>
+
+    <div class="ticket-body">
+        <p><strong>Registrant</strong><?php echo $registrant_name; ?></p>
+        <p><strong>Number of Attendees:</strong><?php echp $attendees; ?</p>
+        <p><strong>Add-ons</strong><?php echo $addons; ?</p>
+    </div>
+
+    <?php if(function_exists('GFQR_Code')): ?>
+    <div class="ticket-qr">
+        <?php echo GRQR_Code::generate($entry_url);>
+    </div>
+    <p class="ticked-footer">Please bring this ticket to the event</p>
+</div>
+
+
+
+</body>
+</html>
